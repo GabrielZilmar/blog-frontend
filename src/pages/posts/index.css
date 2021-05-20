@@ -1,0 +1,12 @@
+.ReadMore {
+  flex: 1;
+  background-color: #eee;
+  border: 3px solid #282c6b;
+  border-radius: 6px;
+  margin: auto auto 1.5% auto;
+  overflow: show;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 50%;
+}

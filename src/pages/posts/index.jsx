@@ -3,6 +3,7 @@ import { list } from '../../api/posts';
 
 import Card from '../../layout/Card';
 import Modal from '../../layout/Modal';
+import Comments from './components/comments';
 
 import './index.css';
 
@@ -10,6 +11,7 @@ export default () => {
   const [loading, setLoading] = useState(false);
   const [isModalVisible, setModalVisible] = useState(false);
   const [posts, setPosts] = useState([]);
+  const [userId, setUserId] = useState(-1);
 
   const handlePosts = async () => {
     setLoading(true);
@@ -33,9 +35,11 @@ export default () => {
               </Card>
               <div className="ReadMore">
                 <button
+                  id={post.userId}
                   type="button"
-                  onClick={() => {
+                  onClick={(event) => {
                     setModalVisible(true);
+                    setUserId(event.target.id);
                   }}
                 >
                   Read More
@@ -52,7 +56,7 @@ export default () => {
       {isModalVisible
       && (
       <Modal onClose={() => setModalVisible(false)}>
-        <h1>Modal Example</h1>
+        <Comments id={userId} />
       </Modal>
       )}
 

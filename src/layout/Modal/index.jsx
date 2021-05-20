@@ -5,6 +5,7 @@ import './index.css';
 
 const Modal = (props) => {
   const { id, onClose, children } = props;
+
   return (
     <div id={id} className="Modal" onKeyPress role="button" tabIndex="0">
       <div className="Container">

@@ -25,7 +25,7 @@ export default () => {
       {
         !loading ? (
           posts.map((post, index) => (
-            <div style={{ margin: index === 0 && '1% auto 1.5% auto' }}>
+            <div style={{ margin: index === 0 && '65px auto 1.5% auto' }}>
               <Card title={post.title}>
                 <p key={post.id}>{post.body}</p>
               </Card>

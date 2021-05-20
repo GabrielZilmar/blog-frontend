@@ -1,0 +1,52 @@
+.HeaderWrapper {
+  height: 45px;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  background: rgba(105, 105, 105);
+}
+
+.Logo {
+  font-size: 2rem;
+  padding: 0 1%;
+  font-family: sans-serif;
+  letter-spacing: 2px;
+  background: rgba(105, 105, 105);
+}
+
+.Link {
+  padding: 0 10px;
+  margin: 0 5px;
+  color: black;
+  text-decoration: none;
+  font-size: 1.1rem;
+  background: rgba(105, 105, 105);
+}
+
+.Link::after {
+  display: block;
+  content: "";
+  border-bottom: 1px solid black;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+.Link:hover::after {
+  transform: scaleX(1.5);
+}
+
+.LinkWrapper {
+  display: flex;
+  background: rgba(105, 105, 105);
+}
+
+@media only screen and (min-width: 2200px) {
+  .Logo {
+    font-size: 3em;
+  }
+  .Link {
+    font-size: 1.8em;
+  }
+}

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { list } from '../../api/posts';
 
-import Card from '../../layout/Card/Card';
+import Card from '../../layout/Card';
 
 import './index.css';
 
@@ -18,7 +18,7 @@ export default () => {
 
   useEffect(() => {
     handlePosts();
-  }, []);
+  }, [1]);
 
   return (
     <div className="post">
@@ -29,7 +29,6 @@ export default () => {
               <Card title={post.title}>
                 <p key={post.id}>{post.body}</p>
               </Card>
-
             </div>
           ))
 

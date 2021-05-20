@@ -40,6 +40,7 @@ export default () => {
                   onClick={(event) => {
                     setModalVisible(true);
                     setUserId(event.target.id);
+                    window.scrollTo(0, 0);
                   }}
                 >
                   Read More

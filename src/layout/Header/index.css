@@ -6,7 +6,7 @@
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  background: rgba(105, 105, 105);
+  background: #282c6b;
 }
 
 .Logo {
@@ -14,7 +14,9 @@
   padding: 0 1%;
   font-family: sans-serif;
   letter-spacing: 2px;
-  background: rgba(105, 105, 105);
+  background: #282c6b;
+  height: 100%;
+  color: #fff;
 }
 
 .Link {
@@ -23,13 +25,14 @@
   color: black;
   text-decoration: none;
   font-size: 1.1rem;
-  background: rgba(105, 105, 105);
+  background: #282c6b;
+  color: #fff;
 }
 
 .Link::after {
   display: block;
   content: "";
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #fff;
   transform: scaleX(0);
   transition: transform 250ms ease-in-out;
 }
@@ -39,7 +42,7 @@
 
 .LinkWrapper {
   display: flex;
-  background: rgba(105, 105, 105);
+  background: #282c6b;
 }
 
 @media only screen and (min-width: 2200px) {

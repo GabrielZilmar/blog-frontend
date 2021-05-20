@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './Card.css';
+import './index.css';
 
 const Card = (props) => {
   const { children, color, title } = props;

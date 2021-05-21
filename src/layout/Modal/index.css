@@ -1,5 +1,5 @@
 .Modal {
-  position: absolute;
+  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,6 +23,10 @@
   height: 60%;
   text-align: center;
   overflow: auto;
+}
+
+.Content {
+  position: sticky;
 }
 
 .Close {

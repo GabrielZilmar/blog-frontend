@@ -40,7 +40,6 @@ export default () => {
                   onClick={(event) => {
                     setModalVisible(true);
                     setUserId(event.target.id);
-                    window.scrollTo(0, 0);
                   }}
                 >
                   Read More
@@ -49,7 +48,7 @@ export default () => {
             </div>
           ))
         ) : (
-          <Card title="Teste">
+          <Card title="Loading">
             <h1 key={0}>Loading...</h1>
           </Card>
         )

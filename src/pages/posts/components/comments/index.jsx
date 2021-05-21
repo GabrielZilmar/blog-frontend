@@ -32,14 +32,18 @@ export default class Comments extends React.Component {
 
     return (
       <div className="Comments">
-        {!loading && comments.map((comment) => (
+        {!loading ? comments.map((comment) => (
           <div>
             <p>{`User: ${comment.name}`}</p>
             <p>{`Email: ${comment.email}`}</p>
             <p>{comment.body}</p>
             <hr />
           </div>
-        ))}
+        )) : (
+          <div>
+            <p>Loading...</p>
+          </div>
+        )}
       </div>
     );
   }

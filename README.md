@@ -16,4 +16,4 @@ Logo após a instalação das dependências, utiliza-se esse comando para rodar 
 
 Pode ser acessado a partir do link:
 
-https://60a809d88eb52a0007026ec3--romantic-hoover-50072c.netlify.app/
+https://zilmarblog.netlify.app

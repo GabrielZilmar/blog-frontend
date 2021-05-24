@@ -4,6 +4,7 @@ import { list } from '../../api/posts';
 import Card from '../../layout/Card';
 import Modal from '../../layout/Modal';
 import Comments from './components/comments';
+import Pagination from '../../components/Pagination';
 
 import './index.css';
 
@@ -12,6 +13,16 @@ export default () => {
   const [isModalVisible, setModalVisible] = useState(false);
   const [posts, setPosts] = useState([]);
   const [userId, setUserId] = useState(-1);
+  const [page, setPage] = useState(1);
+  const [postsPerPage] = useState(5);
+
+  const indexOfLastPost = page * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
+
+  const paginate = (pageNumber) => {
+    setPage(pageNumber);
+  };
 
   const handlePosts = async () => {
     setLoading(true);
@@ -28,7 +39,7 @@ export default () => {
     <div className="post">
       {
         !loading ? (
-          posts.map((post, index) => (
+          currentPosts.map((post, index) => (
             <div style={{ margin: index === 0 && '65px auto auto auto' }}>
               <Card title={post.title}>
                 <p key={post.id}>{post.body}</p>
@@ -59,6 +70,11 @@ export default () => {
         <Comments id={userId} />
       </Modal>
       )}
+      <Pagination
+        postsPerPage={postsPerPage}
+        totalPosts={posts.length}
+        paginate={paginate}
+      />
 
     </div>
   );
